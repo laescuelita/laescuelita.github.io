@@ -329,3 +329,39 @@
       text-align: center;
     }
   }
+
+  #animImgs {
+    height:500px;
+    width: 100%;
+    animation-name:rainbow; 
+    animation-duration:4s; 
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rainbow {
+    0%{
+     background-image: url("/images/Img1.jpeg");
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    25%{
+      background-image: url("/images/Img2.jpeg");
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    50%{
+      background-image: url("/images/Img3.jpeg");
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    75%{
+      background-image: url("/images/Img4.jpeg");
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    100%{
+      background-image: url("/images/Img1.jpeg");
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+  }
