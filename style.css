@@ -365,3 +365,122 @@
       background-size: cover; /* Resize the background image to cover the entire container */
     }
   }
+
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 6vw;
+      }
+    footer{
+      font-size: 4vw;
+     }
+     header{
+      background: var(--main-red);
+    }
+  
+    .headerApp{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows:1fr;
+      column-gap: 5px;
+    }
+    
+    
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        /* border: 3px solid #fff; */
+      }
+      .menu-btn__burger {
+        width: 50px;
+        height: 6px;
+        background:var(--footerbg,#091534);;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+      }
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background:var(--footerbg,#091534);;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+      }
+      .menu-btn__burger::before {
+        transform: translateY(-16px);
+      }
+      .menu-btn__burger::after {
+        transform: translateY(16px);
+      }
+      /* ANIMATION */
+      .menu-btn.open .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+      }
+      .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+    
+      dialog{
+        background-color: rgba(36, 41, 67, 0.9);
+        color: var(--footerbg);
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        width: 70%;
+      }
+    
+     
+        
+        ul{
+          list-style: none;
+          width: inherit;
+          margin: 0;
+          padding: 0;
+          width: 80%;
+        }
+      
+        ul li{
+          list-style-type: none;
+          width: inherit;
+          margin: 1vh 0 1vh 0;
+          border-top: 2px solid red;
+          width: 80%;
+        }
+      
+        ul li:hover{
+          background-color:#ffcc00;
+        }
+      
+        ul li a{
+          text-decoration: none;
+          width: inherit;
+          padding: 1vh 0 1vh 0;
+          color:white;
+        }
+
+     
+      
+      .o-dialog__close-icon {
+        display: block;
+        height: 1rem;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        width: 1rem;
+      }
+    } 
+

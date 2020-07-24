@@ -14,6 +14,19 @@
     
 </head>
 <body>
+
+  <header>
+    <div id="headerAppId" class="headerApp">
+        <div class="menu-btn" style="grid-column:1 / span 2;align-self: start;">
+          <div class="menu-btn__burger">
+          </div> 
+        </div>
+        <div style="grid-column:3 / span 10;align-self: start;">
+           
+        </div>
+    </div>
+  </header>
+
     <nav id="navbar" class="nav">
         <ul class="nav-list">
           <li>
@@ -134,20 +147,21 @@
       
       <section id="contact" class="contact-section">
         <div class="contact-section-header">
-          <h2>Vamos a comenzar a aprender...Acercate a nosotros...</h2>
+          <h2>Vamos a comenzar...Acercate a nosotros...</h2>
           <p>En apoyo a la comunidad los precios son muy accesibles</p>
         </div>
         <div class="contact-links">
-          <a
+          <a href="https://www.facebook.com/La-escuelita-113682390423162/"
             class="btn contact-details"
-            ><i class="fab fa-facebook-square"></i>La Escuelita Facebook (En Construcción)</a>
-          
+            target="_blank"><i class="fab fa-facebook-square"></i>La Escuelita</a>
+        </div>
+        <div class="contact-links">
           <a href="mailto:cdr.laescuelita@gmail.com" class="btn contact-details"
-            ><i class="fas fa-at"></i> Envianos un correo: cdr.laescuelita@gmail.com</a
-          >
+          ><i class="fas fa-at"></i> Envianos un correo: cdr.laescuelita@gmail.com</a>
+        </div>
+        <div class="contact-links">
           <a href="tel:55-81-19-78-13" class="btn contact-details"
-            ><i class="fas fa-mobile-alt"></i> Llamanos:55-81-19-78-13</a
-          >
+          ><i class="fas fa-mobile-alt"></i> Llamanos:55-81-19-78-13</a>
         </div>
       </section>
       
@@ -168,8 +182,32 @@
       <section id="websites" class="projects-section">
         <h2 class="projects-section-header">Conoce nuestro otro sitio web</h2>
         <a href="https://laescuelita.negocio.site/" target="_blank">https://laescuelita.negocio.site/</a>
+        <div id="divfooter" class="contact-links">
+        </div>
+        <div class="contact-links">
+          Elaborado por:<a href="https://sowebmex.github.io/" target="_blank">   SOWEBMEX</a>
+        </div>
       </section> 
      
+
+      <dialog id="favDialog">
+        <button id="closeDialogBtn" type="button" onclick="document.getElementById('favDialog').close();" style="float: right;">
+          <svg class="o-dialog__close-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <title>Close dialog</title>
+            <path d="M3 3l10 10M3 13L13 3"/>
+          </svg>
+        </button>
+    <nav class="xnav">
+      <ul>
+          <li><a href="#welcome-section" onclick="dialogOpenClose()">Acerca de Nosotros</a></li>
+          <li><a href="#projects" onclick="dialogOpenClose()">Nuestros Trabajos</a></li>
+          <li><a href="#contact" onclick="dialogOpenClose()">Contáctenos</a></li>
+          <li><a href="#location" onclick="dialogOpenClose()">Nuestra Ubicación</a></li>
+          <li><a href="#websites" onclick="dialogOpenClose()">Nuestros Sitios Web</a></li>
+      </ul>
+     </nav>
+  </dialog>
+
       <script src="app.js" charset="utf-8"></script>
 
 </body>
